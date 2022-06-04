@@ -9,11 +9,9 @@ function MyApp({Component, pageProps}) {
   return (
     <>
       <Head>
-        <Head>
-          <title>Dad Jokes</title>
-          <meta name="description" content="A place with full of dad jokes"/>
-          <link rel="icon" href="/favicon.ico"/>
-        </Head>
+        <title>Dad Jokes</title>
+        <meta name="description" content="A place with full of dad jokes"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
 
       <Navbar>
