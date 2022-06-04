@@ -5,6 +5,8 @@ with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/
 
 [Dad Jokes Demo](https://dadjokes-next.vercel.app/)
 
+Inspired from [This Video](https://www.youtube.com/watch?v=ltzlhAxJr74)
+
 ## Getting Started
 
 First, run the development server:
