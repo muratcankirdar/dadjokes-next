@@ -25,6 +25,7 @@
 }
 
 .navbar li {
+  color: #0070f3;
   margin: 0 1rem;
 }
 
@@ -85,4 +86,6 @@
   border: none;
   padding: 0.5rem 1rem;
   margin: 0 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
