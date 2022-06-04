@@ -9,12 +9,6 @@ const Home = () => {
           Welcome to <Link href='/jokes'>Dad Jokes</Link>
         </h1>
       </main>
-
-      <footer className={styles.footer}>
-        <p>
-          Made with Dad Jokes API
-        </p>
-      </footer>
     </div>
   )
 }
