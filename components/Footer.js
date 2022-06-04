@@ -1,11 +1,12 @@
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>
+      <Link href='https://icanhazdadjoke.com/api'>
         Made with Dad Jokes API
-      </p>
+      </Link>
     </footer>
   )
 };
