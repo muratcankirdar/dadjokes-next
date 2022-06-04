@@ -6,7 +6,8 @@ import styles from '../../styles/Home.module.css'
 import {useRouter} from 'next/router';
 
 export default function Jokes() {
-  const [jokes, setJokes] = useState([])
+  const [jokes, setJokes] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
@@ -18,7 +19,9 @@ export default function Jokes() {
   const getJokes = useCallback(() => {
     axios.get(`https://icanhazdadjoke.com/search?page=${router.query.page}`)
       .then(({data}) => {
-        setJokes(data.results);
+        const {total_pages: totalPages, results} = data;
+        setJokes(results);
+        setTotalPages(totalPages);
       });
   }, [router.isReady, router.query.page]);
 
@@ -26,17 +29,12 @@ export default function Jokes() {
     getJokes();
   }, [getJokes]);
 
-
-  useEffect(() => {
-    console.log(router.query.page);
-  }, [router.isReady, router.query.page]);
-
   return (
     <div className={styles.container}>
       {jokes.map(joke => (
         <Joke joke={joke.joke} id={joke.id} key={joke.id}/>
       ))}
-      <Pagination/>
+      <Pagination totalPages={totalPages}/>
     </div>
   )
 }

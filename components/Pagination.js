@@ -1,13 +1,16 @@
-import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 import styles from '../styles/Home.module.css';
 
-const Pagination = () => {
+const Pagination = ({totalPages}) => {
   const router = useRouter();
   const loadPage = (page) => {
-    const nextPage = Number(router.query.page) + page;
+    const isFirstPage = +router.query.page + page === 0;
+    const isLastPage = totalPages === +router.query.page;
 
-    router.push(`/jokes?page=${nextPage}`);
+    if ((!isFirstPage && page === -1) || (!isLastPage && page === 1)) {
+      const nextPage = Number(router.query.page) + page;
+      router.push(`/jokes?page=${nextPage}`);
+    }
   };
 
   return (
