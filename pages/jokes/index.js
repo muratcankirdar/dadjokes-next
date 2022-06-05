@@ -44,7 +44,12 @@ export default function Jokes() {
 
   useEffect(() => {
     if (searchTerm === '') {
-      router.push('/jokes?page=1')
+      console.log(router.query.page)
+      if (router.query.page === '1') {
+        getJokes()
+      } else {
+        router.push('/jokes?page=1')
+      }
     }
   }, [searchTerm, router.isReady])
 
