@@ -1,0 +1,9 @@
+.joke {
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.joke:hover {
+  background-color: #f5f5f5;
+}

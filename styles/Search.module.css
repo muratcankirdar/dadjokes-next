@@ -1,0 +1,16 @@
+.search {
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search button {
+  margin: 0 0.5rem;
+  background: #0070f3;
+  outline: none;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

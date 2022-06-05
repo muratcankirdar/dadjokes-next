@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Joke.module.css'
 
 export default function Joke({ joke, id }) {
   return (
