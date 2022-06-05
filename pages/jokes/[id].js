@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import styles from '../../styles/Home.module.css'
+import jokeStyles from '../../styles/Joke.module.css'
 
 export default function Joke() {
   const [joke, setJoke] = useState(null)
@@ -17,7 +18,7 @@ export default function Joke() {
 
   return (
     <div className={styles.container}>
-      <p className={styles.joke}>{joke}</p>
+      <p className={jokeStyles.joke}>{joke}</p>
     </div>
   )
 }
